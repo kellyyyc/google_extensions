@@ -1,0 +1,29 @@
+body {
+    background-color: #ffffff;
+    /* height: 400px;
+    width: 250px; */
+    height: 400px;
+    width: 750px;
+    margin: 15px;
+
+}
+
+.icon {
+    height: 40px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#title-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+#info-wrapper {
+    height: 100%;
+}

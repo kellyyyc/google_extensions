@@ -1,0 +1,23 @@
+<svg width="128" height="128" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient"  gradientTransform="rotate(45)">
+        <stop class="green-gradient" offset="0%" />
+        <stop class="blue-gradient" offset="100%" />
+        </linearGradient>
+    </defs>
+    <style>
+        .green-gradient {
+            stop-color: #17eb81;
+        }
+        .blue-gradient {
+            stop-color: #17ebc1;
+        }
+    </style>
+    <rect
+        rx="25"
+        ry="25"
+        width="128"
+        height="128"
+        fill="url(#gradient)" 
+    />
+</svg>
