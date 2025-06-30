@@ -1,6 +1,6 @@
 {
     "name": "WebTrack",
-    "description": "Keep track of your website usage times!",
+    "description": "Keep track of your website usage!",
     "version": "1.0",
     "manifest_version": 3,
     "background": {
@@ -8,12 +8,14 @@
     },
     "permissions": [
         "storage",
-        "tabs"
+        "tabs",
+        "background",
+        "unlimitedStorage"
     ],
     "action": {
         "default_popup": "popup.html"
     },
     "icons": {
-        "16": "/icons/icon_v2_no_bg.png"
+        "16": "icons/icon_v2_no_bg.png"
     }
 }
