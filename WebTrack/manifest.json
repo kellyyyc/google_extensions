@@ -1,21 +1,16 @@
 {
-    "name": "WebTrack",
-    "description": "Keep track of your website usage!",
-    "version": "1.0",
-    "manifest_version": 3,
-    "background": {
-        "service_worker": "background.js"
-    },
-    "permissions": [
-        "storage",
-        "tabs",
-        "background",
-        "unlimitedStorage"
-    ],
-    "action": {
-        "default_popup": "popup.html"
-    },
-    "icons": {
-        "16": "icons/icon_v2_no_bg.png"
-    }
+  "name": "WebTrack",
+  "description": "Keep track of your website usage!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "tabs", "background", "unlimitedStorage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon_v2_no_bg.png"
+  }
 }
