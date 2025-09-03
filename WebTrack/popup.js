@@ -43,7 +43,9 @@ const load = (data) => {
         const start_time = new Date(start_epoch).toLocaleTimeString();
         const end_time = new Date(end_epoch).toLocaleTimeString();
         // add expanded eurl option
-        // if
+        if (settings["full-url"] === true) {
+        }
+
         const entry_info_element = document.createElement("div");
         entry_info_element.textContent = `${name}: ${start_time}-${end_time}`;
         entries_container_element.appendChild(entry_info_element);
@@ -67,20 +69,18 @@ document.getElementById("settings-icon").addEventListener("click", () => {
 });
 
 document.getElementById("settings-save").addEventListener("click", async () => {
-  const settings = [];
+  const new_settings = {};
   const settings_container =
     document.getElementById("settings-container").children;
   for (let setting of settings_container) {
     if (setting.tagName === "INPUT") {
-      // change - to _
-      const setting_name = setting.id;
-      const setting_value = setting.value;
-      settings.push({ [setting_name]: setting_value });
+      new_settings[setting.id] =
+        setting.type === "checkbox" ? setting.checked : setting.value;
     }
   }
 
-  await chrome.storage.sync.set({ settings: settings });
-
+  await chrome.storage.sync.set({ settings: new_settings });
+  settings = new_settings;
   document.getElementById("settings-page").style.display = "none";
   document.getElementById("main-page").style.display = "block";
 });
